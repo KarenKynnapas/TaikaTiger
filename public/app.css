@@ -47,6 +47,9 @@
             color: #fff;
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0);
+            z-index: 100;
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
         }
         
         .logo {
@@ -70,6 +73,13 @@
         .menu a:hover {
             color: #C0885F;
             transition: 0.3s ease;
+        }
+
+        .navbar.active {
+            background: #021d18B3;
+            backdrop-filter: blur(5px);
+            border-bottom: #C0885F 1px solid;
+            transform: scaleX(1);  
         }
         
         .hero {
@@ -198,7 +208,7 @@
             }
         }
         
-        .portfolio-container {
+        .container {
             margin: 20px 6%;
         }
         
@@ -218,6 +228,11 @@
         .lines-deco {
             border-right: 1px solid #C0885F;
         }
+
+        .line {
+            border-top: solid 1px #C0885F;
+        }
+        
         
         .portfolio-grid {
             display: grid;
