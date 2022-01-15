@@ -48,9 +48,15 @@
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0);
             z-index: 100;
-            transform: scaleX(0);  
-            transition: transform 250ms ease-in-out;
         }
+
+        .navbar.active {
+            background: #021d18B3;
+            backdrop-filter: blur(5px);
+            border-bottom: #C0885F 1px solid;
+            transform: scaleX(1);  
+        }
+
         
         .logo {
             font-family: 'newyorkregular';
@@ -75,12 +81,7 @@
             transition: 0.3s ease;
         }
 
-        .navbar.active {
-            background: #021d18B3;
-            backdrop-filter: blur(5px);
-            border-bottom: #C0885F 1px solid;
-            transform: scaleX(1);  
-        }
+        
         
         .hero {
             width: 100vw;
