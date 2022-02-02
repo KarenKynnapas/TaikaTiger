@@ -15,12 +15,14 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">Taika Tiger</div>
+        <div class="logo">
+           <a href="#top">Taika Tiger</a> 
+        </div>
         <div class="menu">
             <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#portfolio_section">Portfolio</a></li>
+                <li><a href="#about_section">About</a></li>
+                <li><a href="#contact_section">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -61,7 +63,7 @@
 
     </section>
 
-    <section class="portfolio container">
+    <section id="portfolio_section" class="portfolio container">
         <div class="heading-decoration">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="315.49" viewBox="0 0 11 315.49">
                 <g id="Group_14" data-name="Group 14" transform="translate(-955 -1072.372)">
@@ -100,7 +102,7 @@
         </div>
     </section>
     
-    <section class="about container">
+    <section id="about_section" class="container">
         <div class="heading-decoration">
             <div class="line"></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="315.49" viewBox="0 0 11 315.49">
@@ -113,10 +115,32 @@
                 </g>
             </svg>
             <h2>About</h2>
+        </div>  
+        <div class="about">
+           <div class="about-text">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus magnam ea quaerat repellendus inventore ipsam nesciunt officiis. 
+                Dolores, dolorum nesciunt. Numquam omnis veniam ea, iure, quibusdam velit quos fugit quidem ab porro cupiditate ratione tempore voluptatum id 
+                dignissimos odit explicabo culpa labore nulla? Et deleniti in cupiditate fugit impedit odio inventore non fugiat exercitationem voluptatem a.</p>
+            </div>    
+                <div class="portrait">
+                    <img src="images/KK_portrait.png" alt="Karen">
+                </div>
+            
         </div>
     </section>
 
+    <section id="contact_section" class="contact container">
+        <h2>Sparked an interest?</h2>
+        <div class="button-container">
+            <a href="https://ee.linkedin.com/in/karen-k%C3%BCnnapas" target="_blank" class="contact-btn">Contact me on LinkedIn</a>
+        </div>
+    </section>
 
+    <footer>
+        <div><img src="images/Taika_Tiger_Logo.svg" alt="Taika_Tiger_Logo"></div>
+        <div class="author">Website by <span style="color: #C0885F">Taika Tiger</span></div>
+        <p>All rights reserved ©</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
