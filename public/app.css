@@ -11,9 +11,9 @@
             box-sizing: border-box;
         }
         
-        html,
-        body {
+        html {
             overflow-x: hidden;
+            overflow-y: scroll;
             scroll-behavior: smooth;
         }
         
@@ -27,9 +27,14 @@
             font-family: 'Raleway', sans-serif;
             line-height: 2em;
         }
-
+        
+        h1,
         h2 {
-            font-size: 4em;
+            font-weight: normal;
+        }
+        
+        h2 {
+            font-size: 4rem;
             text-align: center;
             padding: 0.5em 0em;
         }
@@ -44,7 +49,7 @@
         
         .navbar {
             position: fixed;
-            width: 100%;
+            width: 100vw;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -54,14 +59,13 @@
             background: rgba(0, 0, 0, 0);
             z-index: 100;
         }
-
+        
         .navbar.active {
             background: #021d18B3;
             backdrop-filter: blur(5px);
             border-bottom: #C0885F 1px solid;
-            transform: scaleX(1);  
+            transform: scaleX(1);
         }
-
         
         .logo a {
             font-family: 'newyorkregular';
@@ -86,25 +90,42 @@
             color: #C0885F;
             transition: 0.3s ease;
         }
-
-        
         
         .hero {
             width: 100vw;
             height: 100vh;
-            display: flex;
-            align-items: center;
+            padding-left: 6%;
+            padding-right: 6%;
+            position: relative;
             background-image: url("images/Green_Textured_BG.png");
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: sticky;
-            overflow: hidden;
+            overflow-x: hidden;
+            display: flex;
+        }
+        
+        .hero-logo {
+            position: absolute;
+            width: 100vw;
+            height: auto;
+            left: 0;
+            top: 10vh;
+        }
+        
+        .hero-logo img {
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            display: block;
         }
         
         .hero-inner {
-            padding: 3em 6% 0em;
-            max-width: 100%;
+            margin: auto;
+            height: auto;
+            width: 100vw;
+            z-index: 1;
         }
         
         .headline {
@@ -116,19 +137,6 @@
             vertical-align: middle;
             width: 294px;
             height: auto;
-        }
-        
-        .hero-logo {
-            width: auto;
-            height: auto;
-        }
-        
-        .hero-logo img {
-            position: absolute;
-            right: -10%;
-            top: 15%;
-            width: auto;
-            height: 100%;
         }
         
         .scroll-anim {
@@ -235,11 +243,10 @@
         .lines-deco {
             border-right: 1px solid #C0885F;
         }
-
+        
         .line {
             border-top: solid 1px #C0885F;
         }
-        
         
         .portfolio-grid {
             display: grid;
@@ -288,7 +295,7 @@
             opacity: 0;
             transition: .5s ease;
         }
-
+        
         .about {
             margin: 20px 0;
             display: grid;
@@ -302,73 +309,92 @@
             height: auto; */
             width: 100%;
             height: 100%;
-            -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-          }
-         
-          #contact_section {
-              margin: 100px auto 0;
-              position: relative; 
-              width: 80vw; 
-              height: 60vh;
-              overflow: hidden;
-              border-top: #C0885F 1px solid;
-              border-left: #C0885F 1px solid;
-              border-right: #C0885F 1px solid;
+            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+        
+        #contact_section {
+            margin: 100px 6% 0;
+            position: relative;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            border-top: #C0885F 1px solid;
+            border-left: #C0885F 1px solid;
+            border-right: #C0885F 1px solid;
             border-radius: 50% 50% 0 0/ 100% 100% 0 0;
-         
-          }
-
-          #contact_section h2 {
-              margin: 150px auto 0;
-              width: 60vw;
-          }
-
-          .button-container {
+        }
+        
+        .contact-content {
+            padding-top: 100px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        #contact_section h2 {
+            width: 60vw;
+        }
+        
+        .button-container {
             display: flex;
             justify-content: center;
-            margin: 60px auto;
-          }
-
-          .contact-btn {
+            margin: 40px auto;
+        }
+        
+        .contact-btn {
             font-family: 'Raleway', sans-serif;
             line-height: 2em;
             text-transform: uppercase;
             letter-spacing: 0.2em;
             font-weight: 600;
-              border-radius: 500px;
-              background-color: #C0885F;
-              padding: 16px 32px;
-                text-align: center;
-                text-decoration: none;
-                color: #061212;
-                font-size: 0.8em;
-                cursor: pointer;
-                transition-duration: 0.4s;
-          }
-
-          .contact-btn:hover {
+            border-radius: 500px;
+            background-color: #C0885F;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            color: #061212;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        
+        .contact-btn:hover {
             border: #C0885F 1px solid;
             background-color: #061212;
             color: #fff;
-          }
-
-          footer {
-              background-color: #021D1B;
-              height: 60vh;
-              width: auto;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-          }
-
-          .author {
-              font-size: 2em;
-              margin-top: 40px;
-          }
-
-
+        }
+        
+        footer {
+            background-color: #021D1B;
+            height: auto;
+            width: 100vw;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .footer-content img {
+            width: 10%;
+            min-width: 150px;
+            height: auto;
+        }
+        
+        .author {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        
         @media (hover: hover) and (pointer: fine) {
             .image-wrapper:hover:before {
                 opacity: 1;
@@ -380,9 +406,6 @@
         }
         
         @media only screen and (max-width: 1500px) {
-            .hero-logo img {
-                height: 80%;
-            }
             .headline {
                 font-size: 40px;
             }
@@ -401,17 +424,31 @@
             .headline svg {
                 width: 156px;
             }
-            .hero-logo img {
-                height: 70%;
+            #contact_section {
+                margin: 100px auto 0;
+                position: relative;
+                width: 100vw;
+                height: 50vh;
+                overflow: hidden;
+                border-top: #C0885F 1px solid;
+                border-left: #C0885F 1px solid;
+                border-right: #C0885F 1px solid;
+                border-radius: 50% 50% 0 0/ 100% 100% 0 0;
             }
         }
         
         @media only screen and (max-width: 900px) {
+            .hero-logo {
+                position: absolute;
+                width: 100vw;
+                height: auto;
+                left: 0;
+                top: 10vh;
+            }
             .hero-logo img {
-                opacity: 20%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                max-width: 150%;
+                opacity: 40%;
+                height: auto;
             }
             .headline {
                 font-size: 28px;
