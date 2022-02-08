@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-           <a href="#top">Taika Tiger</a> 
+            <a href="#top">Taika Tiger</a>
         </div>
         <div class="menu">
             <ul>
@@ -26,7 +26,7 @@
             </ul>
         </div>
     </nav>
-    
+
 
     <section class="hero">
         <div class="hero-inner">
@@ -55,12 +55,8 @@
             </div>
         </div>
         <div class="hero-logo">
-            <img src="images/Taika_Tiger_Logo_BG.svg" alt="Taika_Tiger_Logo_Background">
         </div>
-        <div class="scoll-anim">
-            <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
-        </div>
-
+        <div class="scroll-down"></div>
     </section>
 
     <section id="portfolio_section" class="portfolio container">
@@ -82,26 +78,25 @@
         </div>
 
         <div class="portfolio-grid">
-            <div class="post image-wrapper">
+            <div id="case1" class="post image-wrapper">
                 <img src="images/mj.png" alt="Synthwave Poster">
                 <div class="title">Synthwave Poster</div>
             </div>
-            <div class="post image-wrapper">
+            <div id="case2" class="post image-wrapper">
                 <img src="images/mj.png" alt="Synthwave Poster">
                 <div class="title">Synthwave Poster</div>
             </div>
-            <div class="post image-wrapper">
+            <div id="case3" class="post image-wrapper">
                 <img src="images/mj.png" alt="Synthwave Poster">
                 <div class="title">Synthwave Poster</div>
             </div>
-            <div class="post image-wrapper">
+            <div id="case4" class="post image-wrapper">
                 <img src="images/mj.png" alt="Synthwave Poster">
                 <div class="title">Synthwave Poster</div>
             </div>
-
         </div>
     </section>
-    
+
     <section id="about_section" class="container">
         <div class="heading-decoration">
             <div class="line"></div>
@@ -115,17 +110,16 @@
                 </g>
             </svg>
             <h2>About</h2>
-        </div>  
+        </div>
         <div class="about">
-           <div class="about-text">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus magnam ea quaerat repellendus inventore ipsam nesciunt officiis. 
-                Dolores, dolorum nesciunt. Numquam omnis veniam ea, iure, quibusdam velit quos fugit quidem ab porro cupiditate ratione tempore voluptatum id 
-                dignissimos odit explicabo culpa labore nulla? Et deleniti in cupiditate fugit impedit odio inventore non fugiat exercitationem voluptatem a.</p>
-            </div>    
-                <div class="portrait">
-                    <img src="images/KK_portrait.png" alt="Karen">
-                </div>
-            
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus magnam ea quaerat repellendus inventore ipsam nesciunt officiis. Dolores, dolorum nesciunt. Numquam omnis veniam ea, iure, quibusdam velit quos fugit quidem
+                    ab porro cupiditate ratione tempore voluptatum id dignissimos odit explicabo culpa labore nulla? Et deleniti in cupiditate fugit impedit odio inventore non fugiat exercitationem voluptatem a.</p>
+            </div>
+            <div class="portrait">
+                <img src="images/KK_portrait.png" alt="Karen">
+            </div>
+
         </div>
     </section>
 
@@ -135,7 +129,7 @@
             <div class="button-container">
                 <a href="https://ee.linkedin.com/in/karen-k%C3%BCnnapas" target="_blank" class="contact-btn">Contact me on LinkedIn</a>
             </div>
-        </div>    
+        </div>
     </section>
 
     <footer>
@@ -145,6 +139,20 @@
             <p>All rights reserved 2022 ©</p>
         </div>
     </footer>
+
+    <div id="modal1" class="modal-container" style="display: none;">
+        <div class="modal-content">
+            <span id="close1" class="close">&times;</span>
+            <h2>Synthwave Poster</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus magnam ea quaerat repellendus inventore ipsam nesciunt officiis. Dolores, dolorum nesciunt. Numquam omnis veniam ea, iure, quibusdam velit quos fugit quidem ab porro
+                cupiditate ratione tempore voluptatum id dignissimos odit explicabo culpa labore nulla? Et deleniti in cupiditate fugit impedit odio inventore non fugiat exercitationem voluptatem a.</p>
+            </p>
+            <img class="case-image" src="images/mj.png" alt="Synthwave Poster" srcset="">
+            <img class="case-image" src="images/mj.png" alt="Synthwave Poster" srcset="">
+            <img class="case-image" src="images/mj.png" alt="Synthwave Poster" srcset="">
+        </div>
+
+    </div>
 
     <script src="app.js"></script>
 </body>

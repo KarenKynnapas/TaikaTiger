@@ -13,7 +13,6 @@
         
         html {
             overflow-x: hidden;
-            overflow-y: scroll;
             scroll-behavior: smooth;
         }
         
@@ -21,6 +20,7 @@
             font-family: 'newyorkregular';
             color: #fff;
             background-color: #061212;
+            overflow-x: hidden;
         }
         
         p {
@@ -97,9 +97,9 @@
             padding-left: 6%;
             padding-right: 6%;
             position: relative;
-            background-image: url("images/Green_Textured_BG.png");
-            background-size: cover;
-            background-position: center center;
+            background-image: url("images/Taika_Tiger_Logo_BG.svg"), url("images/Green_Textured_BG.png");
+            background-size: 80vh, cover;
+            background-position: right, center;
             background-repeat: no-repeat;
             background-attachment: sticky;
             overflow-x: hidden;
@@ -142,86 +142,75 @@
         .scroll-anim {
             margin: auto;
             width: 100%;
+            z-index: -1;
         }
         /* Scroll animation */
         
-        html body [data-ca3_iconfont="ETmodules"]::before {
-            font-family: "ETmodules";
-        }
-        
-        [data-ca3_icon]::before {
-            font-weight: normal;
-            content: attr(data-ca3_icon);
-        }
-        
-        .ca3-scroll-down-arrow {
-            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        
-        .ca3-scroll-down-link {
-            cursor: pointer;
-            height: 60px;
-            width: 80px;
-            margin: 0px 0 0 -32px;
-            line-height: 60px;
+        .scroll-down {
             position: absolute;
-            left: 50%;
-            bottom: 0px;
-            color: #FFF;
+            left: calc(50% - 15px);
+            bottom: 5vh;
+            display: block;
             text-align: center;
-            font-size: 70px;
+            font-size: 20px;
             z-index: 100;
             text-decoration: none;
-            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
-            -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
-            -moz-animation: ca3_fade_move_down 2s ease-in-out infinite;
-            animation: ca3_fade_move_down 2s ease-in-out infinite;
+            text-shadow: 0;
+            width: 30px;
+            height: 30px;
+            border-bottom: 3px solid #C0885F;
+            border-right: 3px solid #C0885F;
+            z-index: 9;
+            -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            -moz-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+            -webkit-animation: fade_move_down 2s ease-in-out infinite;
+            -moz-animation: fade_move_down 2s ease-in-out infinite;
+            animation: fade_move_down 2s ease-in-out infinite;
         }
-        /*animated scroll arrow animation*/
         
-        @-webkit-keyframes ca3_fade_move_down {
+        @-webkit-keyframes fade_move_down {
             0% {
-                -webkit-transform: translate(0, -20px);
+                -webkit-transform: translate(0, -10px) rotate(45deg);
                 opacity: 0;
             }
             50% {
                 opacity: 1;
             }
             100% {
-                -webkit-transform: translate(0, 20px);
+                -webkit-transform: translate(0, 10px) rotate(45deg);
                 opacity: 0;
             }
         }
         
-        @-moz-keyframes ca3_fade_move_down {
+        @-moz-keyframes fade_move_down {
             0% {
-                -moz-transform: translate(0, -20px);
+                -moz-transform: translate(0, -10px) rotate(45deg);
                 opacity: 0;
             }
             50% {
                 opacity: 1;
             }
             100% {
-                -moz-transform: translate(0, 20px);
+                -moz-transform: translate(0, 10px) rotate(45deg);
                 opacity: 0;
             }
         }
         
-        @keyframes ca3_fade_move_down {
+        @keyframes fade_move_down {
             0% {
-                transform: translate(0, -20px);
+                transform: translate(0, -10px) rotate(45deg);
                 opacity: 0;
             }
             50% {
                 opacity: 1;
             }
             100% {
-                transform: translate(0, 20px);
+                transform: translate(0, 10px) rotate(45deg);
                 opacity: 0;
             }
         }
+        /*end animated scroll arrow animation*/
         
         .container {
             margin: 20px 6%;
@@ -294,12 +283,58 @@
             border-bottom: 1px solid #C0885F;
             opacity: 0;
             transition: .5s ease;
+            cursor: pointer;
+        }
+        
+        .modal-container {
+            /* display: none; */
+            position: fixed;
+            z-index: 101;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black w/ opacity */
+        }
+        
+        .modal-content {
+            background-color: #061212;
+            margin: auto;
+            padding: 20px 60px;
+            border: 1px solid #C0885F;
+            border-radius: 10px;
+            width: 80%;
+        }
+        
+        .close {
+            color: #C0885F;
+            float: right;
+            font-size: 72px;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .case-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-top: 60px;
         }
         
         .about {
             margin: 20px 0;
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 1fr 1fr;
             place-items: center;
             gap: 60px;
         }
@@ -314,8 +349,8 @@
         }
         
         #contact_section {
-            margin: 100px 6% 0;
             position: relative;
+            margin: 0 6%;
             width: auto;
             height: auto;
             overflow: hidden;
@@ -424,17 +459,6 @@
             .headline svg {
                 width: 156px;
             }
-            #contact_section {
-                margin: 100px auto 0;
-                position: relative;
-                width: 100vw;
-                height: 50vh;
-                overflow: hidden;
-                border-top: #C0885F 1px solid;
-                border-left: #C0885F 1px solid;
-                border-right: #C0885F 1px solid;
-                border-radius: 50% 50% 0 0/ 100% 100% 0 0;
-            }
         }
         
         @media only screen and (max-width: 900px) {
@@ -459,6 +483,14 @@
             .portfolio-grid {
                 grid-template-columns: auto;
             }
+            #contact_section {
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+                overflow: hidden;
+                margin-top: 100px;
+                margin-left: -20%;
+                margin-right: -20%;
+            }
         }
         
         @media only screen and (max-width: 700px) {
@@ -477,5 +509,15 @@
             }
             h2 {
                 font-size: 3em;
+            }
+            .about {
+                grid-template-columns: 1fr;
+            }
+            .portrait {
+                grid-row: 1;
+            }
+            .contact-btn {
+                font-size: 0.6em;
+                padding: 12px 24px;
             }
         }
