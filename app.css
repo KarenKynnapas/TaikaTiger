@@ -439,6 +439,7 @@
             font-size: 0.8em;
             cursor: pointer;
             transition-duration: 0.4s;
+            border: 1px solid transparent;
         }
         
         .contact-btn:hover {
