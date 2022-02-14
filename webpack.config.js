@@ -14,10 +14,16 @@ module.exports = {
     mode: 'development',
 
     devServer: {
-        watchFiles: ["./public/*"], // string [string] object [object]
+        watchFiles: ["./*"], // string [string] object [object]
         port: 3000,
         open: true,
         hot: true,
+    },
+
+    watchOptions: {
+        ignored: [
+            "./node_modules/*",
+        ],
     },
 
     plugins: [
@@ -26,7 +32,7 @@ module.exports = {
         // filename output defined above.
         new HtmlWebpackPlugin({
             inject: true,
-            template: resolveAppPath('public/index.html'),
+            template: resolveAppPath('index.html'),
         }),
     ],
 
