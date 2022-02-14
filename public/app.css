@@ -255,6 +255,7 @@
         .image-wrapper {
             position: relative;
             float: left;
+            height: 100%;
         }
         
         .image-wrapper .title {
@@ -287,10 +288,11 @@
         }
         
         .modal-container {
-            /* display: none; */
+            display: none;
             position: fixed;
             z-index: 101;
             padding-top: 100px;
+            padding-bottom: 100px;
             left: 0;
             top: 0;
             width: 100%;
@@ -305,15 +307,36 @@
         .modal-content {
             background-color: #061212;
             margin: auto;
-            padding: 20px 60px;
+            padding: 20px 60px 0px;
             border: 1px solid #C0885F;
             border-radius: 10px;
             width: 80%;
+            max-width: 1250px;
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 60px;
+            border-bottom: #C0885F 1px solid;
+        }
+        
+        .modal-content p {
+            margin-bottom: 60px;
+        }
+        
+        .agency {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        .close-wrapper {
+            display: grid;
+            justify-content: end;
+            height: 50px;
         }
         
         .close {
             color: #C0885F;
-            float: right;
+            position: relative;
             font-size: 72px;
         }
         
@@ -328,7 +351,18 @@
             max-width: 100%;
             height: auto;
             object-fit: cover;
-            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .modal-content video {
+            width: 100% !important;
+            height: auto !important;
+            margin-bottom: 60px;
+        }
+        
+        .info {
+            font-style: italic;
+            color: hsl(176, 10%, 40%);
         }
         
         .about {
@@ -346,6 +380,16 @@
             height: 100%;
             -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+        
+        .about-text q {
+            line-height: 1.5em;
+            font-size: 1.5em;
+            color: #C0885F;
+        }
+        
+        .about-text p {
+            margin-top: 20px;
         }
         
         #contact_section {
@@ -483,6 +527,16 @@
             .portfolio-grid {
                 grid-template-columns: auto;
             }
+            .modal-content {
+                padding: 20px 20px 0px;
+                width: 95%;
+            }
+            .case-image {
+                margin-bottom: 20px;
+            }
+            .modal-content video {
+                margin-bottom: 20px;
+            }
             #contact_section {
                 border-top-left-radius: 50%;
                 border-top-right-radius: 50%;
@@ -508,7 +562,7 @@
                 height: 150px;
             }
             h2 {
-                font-size: 3em;
+                font-size: 2.5em;
             }
             .about {
                 grid-template-columns: 1fr;

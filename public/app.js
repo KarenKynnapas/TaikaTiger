@@ -1,7 +1,6 @@
 const nav = document.querySelector('.navbar');
 window.onscroll = function() {
     var top = window.scrollY;
-    console.log(top);
     if (top >= 100) {
         nav.classList.add('active')
     } else {
@@ -30,11 +29,11 @@ function addModalFunctionality(myModalId, myBtnId, spanId) {
     }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
+    }, false);
 }
 
 addModalFunctionality("modal1", "case1", "close1");
