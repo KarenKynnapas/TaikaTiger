@@ -18,7 +18,7 @@
         
         body {
             font-family: 'newyorkregular';
-            color: #fff;
+            color: rgb(255, 255, 255);
             background-color: #061212;
             overflow-x: hidden;
         }
@@ -97,40 +97,41 @@
             padding-left: 6%;
             padding-right: 6%;
             position: relative;
-            background-image: url("images/Taika_Tiger_Logo_BG.svg"), url("images/Green_Textured_BG.png");
-            background-size: 80vh, cover;
+            background-image: url("images/Green_Textured_BG.png");
+            background-size: cover;
             background-position: right, center;
             background-repeat: no-repeat;
             background-attachment: sticky;
-            overflow-x: hidden;
+            overflow: visible;
             display: flex;
         }
         
-        .hero-logo {
-            position: absolute;
+        .hero-logo-container {
             width: 100vw;
-            height: auto;
-            left: 0;
-            top: 10vh;
+            height: 100vh;
         }
         
-        .hero-logo img {
-            max-width: 100%;
-            height: auto;
-            margin: auto;
-            display: block;
+        .hero-logo {
+            max-width: auto;
+            height: 100vh;
+            right: 0;
+            top: 10%;
+            position: absolute;
         }
         
         .hero-inner {
-            margin: auto;
             height: auto;
             width: 100vw;
-            z-index: 1;
+            position: relative;
         }
         
         .headline {
             font-size: 60px;
             color: #C0885F;
+            z-index: 1;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
         
         .headline svg {
@@ -396,6 +397,7 @@
         
         .about-text p {
             margin-top: 20px;
+            color: rgb(168, 168, 168);
         }
         
         #contact_section {
@@ -514,16 +516,8 @@
         
         @media only screen and (max-width: 900px) {
             .hero-logo {
-                position: absolute;
-                width: 100vw;
-                height: auto;
-                left: 0;
-                top: 10vh;
-            }
-            .hero-logo img {
-                max-width: 150%;
                 opacity: 40%;
-                height: auto;
+                left: 0;
             }
             .headline {
                 font-size: 28px;
