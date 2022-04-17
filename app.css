@@ -483,6 +483,19 @@
             margin-top: 20px;
         }
         
+        .modal-container p {
+            color: rgb(168, 168, 168);
+        }
+        
+        .modal-container a {
+            color: #C0885F;
+            text-decoration: underline;
+        }
+        
+        .modal-container a:hover {
+            color: #fff;
+        }
+        
         @media (hover: hover) and (pointer: fine) {
             .image-wrapper:hover:before {
                 opacity: 1;

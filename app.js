@@ -40,3 +40,5 @@ addModalFunctionality("modal1", "case1", "close1");
 addModalFunctionality("modal2", "case2", "close2");
 addModalFunctionality("modal3", "case3", "close3");
 addModalFunctionality("modal4", "case4", "close4");
+addModalFunctionality("modal5", "case5", "close5");
+addModalFunctionality("modal6", "case6", "close6");
